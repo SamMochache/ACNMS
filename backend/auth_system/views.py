@@ -12,19 +12,25 @@ class RegisterView(generics.CreateAPIView):
     serializer_class = RegisterSerializer
     permission_classes = [permissions.AllowAny]
 
+
 class LoginView(generics.GenericAPIView):
     serializer_class = LoginSerializer
 
     def post(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        user = authenticate(username=serializer.validated_data['username'], password=serializer.validated_data['password'])
 
-        if user:
+        email = serializer.validated_data['email']
+        password = serializer.validated_data['password']
+
+        user = User.objects.filter(email=email).first()
+
+        if user and user.check_password(password):
             refresh = RefreshToken.for_user(user)
             return Response({
                 "refresh": str(refresh),
                 "access": str(refresh.access_token),
                 "user": UserSerializer(user).data
             })
+
         return Response({"error": "Invalid Credentials"}, status=400)

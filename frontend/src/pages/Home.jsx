@@ -10,7 +10,7 @@ const Home = () => {
       <div className="glassmorphic-box text-center p-4">
         <h1 className="display-4 text-white">Welcome to Automated Cybersecurity & Network Monitoring System</h1>
         <p className="lead text-white">"Seamlessly connect, create, and secure your digital experience—your journey starts here."</p>
-        <button className="btn btn-primary mt-3" onClick={() => navigate("/login")}>
+        <button className="btn btn-primary mt-3" onClick={() => navigate("/register")}>
           Get Started
         </button>
       </div>

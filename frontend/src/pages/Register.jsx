@@ -8,6 +8,7 @@ const Register = () => {
     username: "",
     email: "",
     password: "",
+    role: ""  // Default role
   });
 
   const handleChange = (e) => {
@@ -62,6 +63,13 @@ const Register = () => {
               required
             />
           </div>
+          <div className="mb-3">
+    <select name="role" onChange={handleChange} className="form-control" required>
+      <option value="viewer">Viewer</option>
+      <option value="admin">Admin</option>
+      <option value="analyst">Security Analyst</option>
+    </select>
+  </div>
 
           <button type="submit" className="btn btn-primary w-100">Sign Up</button>
         </form>
