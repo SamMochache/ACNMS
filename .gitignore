@@ -1,0 +1,23 @@
+#database
+db.sqlite3
+#python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+#python virtual environment
+jongolove/
+#python egg
+*.egg-info/
+#python cache
+*.egg
+#python coverage
+.coverage
+.coverage.*
+#python test
+frontend/node_modules/
+#python test
+*.cover
+*.coveragerc
+
+migrations/

@@ -1,0 +1,77 @@
+.login-container {
+  background: url('shrub.jpg') no-repeat center center/cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-form {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  width: 100%;
+  max-width: 350px;
+  min-width: 280px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form h2 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+/* Style for the form fields */
+.login-form .form-control {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  width: 100%;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+
+.login-form .form-control:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Placeholder color */
+.login-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Spacing between input fields */
+.login-form .mb-3 {
+  margin-bottom: 1.2rem;
+}
+
+/* Style for the "Remember me" checkbox */
+.form-check-input {
+  margin-right: 8px;
+}
+
+/* Style for the Login button */
+.login-form .btn-primary {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+.login-form .btn-primary:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
